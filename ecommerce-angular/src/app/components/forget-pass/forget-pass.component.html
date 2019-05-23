@@ -1,0 +1,16 @@
+<div class="login-page forgetpass">
+		<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+			<h3 class="title">ForgetPass</h3>
+			</div>
+<div class="widget-shadow">
+			<div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+				<h4>Enter Your email</h4>
+			</div><div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
+				<form [formGroup]="rForm"  (ngSubmit)="forgetPass()">
+					<input type="email" style="font-size: 1em;padding: 0.9em 1em;width: 100%;color: #999;outline: none;border: 1px solid #E2DCDC;background: #FFFFFF;margin: 0em 0em 1em 0em;" class="user"  placeholder="Enter your email" required="" formControlName="email"  placeholder="Email" required=""  [(ngModel)]="data.email">
+					<div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This is required</div>
+					<input type="submit" value="Change Password">	
+				</form>
+			</div>
+			</div>
+	</div>

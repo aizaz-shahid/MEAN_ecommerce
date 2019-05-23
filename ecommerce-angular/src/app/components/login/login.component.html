@@ -1,0 +1,83 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+	<!--header-->
+
+	<!--//header-->
+	<!--breadcrumbs-->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow fadeInUp" data-wow-delay=".5s">
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Sign In</li>
+			</ol>
+		</div>
+	</div>
+	<!--//breadcrumbs-->
+	<!--login-->
+	<div class="login-page">
+		<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+			<h3 class="title">SignIn<span> Form</span></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur </p>
+		</div>
+		<div class="widget-shadow">
+			<div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+				<h4>Welcome back to Modern Shoppe ! <br> Not a Member? <a href="register.html">  Register Now »</a> </h4>
+			</div>
+			<div class="login-body wow fadeInUp animated" data-wow-delay=".7s">
+				<form [formGroup]="rForm" (ngSubmit)="login()">
+					<input type="text" class="user"  placeholder="Enter your email" required="" formControlName="email"  placeholder="First Name" required="" [(ngModel)]="data.email">
+					<div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This is required</div>
+					<input type="password"  formControlName="password" class="lock" placeholder="Password" required="" [(ngModel)]="data.password">
+					<div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This is required</div>
+					<input type="submit" value="Sign In"  >
+					<div class="forgot-grid">
+						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Remember me</label>
+						<div class="forgot">
+							<a href="/forgetpass">Forgot Password?</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="login-page-bottom">
+			<h5> - OR -</h5>
+			<div class="social-btn"><a  (click)="socialLogin('facebook')" *ngIf="!(user | async)?.uid" ><i>Sign In with Facebook</i></a></div>
+			<div class="social-btn sb-two"><a (click)="socialLogin('twitter')" *ngIf="!(user | async)?.uid"><i>Sign In with Twitter</i></a></div>
+			<br><br>
+			<div class="social-btn sb-three" style="background-color:red"><a (click)="socialLogin('google')" *ngIf="!(user | async)?.uid"><i>Sign In with Google</i></a></div>
+		</div>
+	</div>
+	<ng2-toasty></ng2-toasty>
+	<!--//login-->
+	<!--footer-->
+
+	<!--//footer-->
+	<!--search jQuery-->
+	<script src="js/main.js"></script>
+	<!--//search jQuery-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!--//smooth-scrolling-of-move-up-->
+	<!--Bootstrap core JavaScript
+    ================================================== -->
+    <!--Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>

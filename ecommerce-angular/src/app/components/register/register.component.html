@@ -1,0 +1,73 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+	<!--header-->
+
+	<!--//header-->
+	<!--breadcrumbs-->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Register</li>
+			</ol>
+		</div>
+	</div>
+	<!--//breadcrumbs-->
+	<!--login-->
+	
+	<div class="login-page">
+		<div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+			<h3 class="title">Register<span> Form</span></h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur </p>
+		</div>
+		<div class="widget-shadow">
+			<div class="login-top wow fadeInUp animated" data-wow-delay=".7s">
+				<h4>Already have an Account ?<a href="signin.html">  Sign In »</a> </h4>
+			</div>
+			<div class="login-body">
+				<form [formGroup]="rForm" class="wow fadeInUp animated" data-wow-delay=".7s" (ngSubmit)="formSubmit()">
+					<input type="text" formControlName="fname"  placeholder="First Name" required="" [(ngModel)]="data.firstname">
+						<div class="alert" *ngIf="!rForm.controls['fname'].valid && rForm.controls['fname'].touched">This is required</div>
+					<input type="text"  formControlName="lname" placeholder="Last Name" required="" [(ngModel)]="data.lastname">
+					<div class="alert" *ngIf="!rForm.controls['lname'].valid && rForm.controls['lname'].touched">This is required</div>
+					<input type="email"  formControlName="email" style="font-size: 1em; padding: 0.9em 1em;width: 100%;color: #999;outline: none;border: 1px solid #E2DCDC;background: #FFFFFF;margin: 0em 0em 1em 0em;" class="email" placeholder="Email Address" required="" [(ngModel)]="data.email">
+					<div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This is required</div>
+					<input type="password"  class="lock" formControlName="password" placeholder="Password" [(ngModel)]="data.password">
+					<div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This is required</div>
+					<!-- <input type="password" name="confirmpassword" class="lock" formControlName="conformpassword" placeholder="Confirm Password" [(ngModel)]="data.confirmpassword"> -->
+					<select required="" [(ngModel)]="data.country" id="country" formControlName="country" style="font-size: 1em; padding: 0.9em 1em;width: 100%;color: #999;outline: none;border: 1px solid #E2DCDC;background: #FFFFFF;margin: 0em 0em 1em 0em;"><option>Select country</option></select>
+					<div class="alert" *ngIf="!rForm.controls['country'].valid && rForm.controls['country'].touched">This is required</div>
+					<select required="" [(ngModel)]="data.state" formControlName="state" id="state" placeholder="Select State" style="font-size: 1em; padding: 0.9em 1em;width: 100%;color: #999;outline: none;border: 1px solid #E2DCDC;background: #FFFFFF;margin: 0em 0em 1em 0em;"><option>Select State</option></select>
+					<div class="alert" *ngIf="!rForm.controls['state'].valid && rForm.controls['state'].touched">This is required</div>
+					<input type="text" formControlName="address" placeholder="Address" required="" [(ngModel)]="data.address">
+					<div class="alert" *ngIf="!rForm.controls['address'].valid && rForm.controls['address'].touched">This is required</div>
+					 <fieldset id="group1" style="text-align: center;">
+        			 <LABEL>Gender</LABEL>
+        			 <br>
+       					 Male:<input type="radio" value="male" formControlName="gender" [(ngModel)]="data.gender" >&nbsp;&nbsp;&nbsp;
+        				 Female:<input type="radio" value="female"  formControlName="gender" [(ngModel)]="data.gender" >
+    				</fieldset>
+    				
+					<input type="submit"  value="Register">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--//login-->
+	<!--footer-->
+	
+	<!--//footer-->				
+	<!--search jQuery-->
+	
+	<!--//search jQuery-->
+	<!--smooth-scrolling-of-move-up-->
+	
+	<!--//smooth-scrolling-of-move-up-->
+	<!--Bootstrap core JavaScript
+    ================================================== -->
+    <!--Placed at the end of the document so the pages load faster -->
+    
